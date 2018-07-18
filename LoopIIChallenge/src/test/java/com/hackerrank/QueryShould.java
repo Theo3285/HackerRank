@@ -6,7 +6,6 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import java.util.Arrays;
 import java.util.List;
 
 import static java.util.Arrays.asList;
@@ -22,17 +21,22 @@ public class QueryShould {
     @Mock
     private SerieOutputPrinter serieOutputPrinter;
 
+    @Mock
+    private Serie serie;
+
     private List<Serie> series;
     private Query query;
 
     @Before
     public void initialise() {
-        series = asList(new Serie(0, 2, 1));
+        series = asList(serie);
         query = new Query(serieOutputRepository, serieOutputPrinter, series);
     }
 
     @Test
     public void generate_and_store_serie_output() {
+        given(serie.generate()).willReturn("2");
+
         query.generate();
 
         verify(serieOutputRepository).add("2");
