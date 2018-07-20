@@ -15,5 +15,4 @@ public abstract class TypesRule {
             nextRule.execute(types, value);
         }
     }
-
 }

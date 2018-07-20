@@ -16,5 +16,4 @@ public class IntRule extends TypesRule {
     private boolean fitsInInt(String value) {
         return valueOf(value) >= Integer.MIN_VALUE && valueOf(value) <= Integer.MAX_VALUE;
     }
-
 }

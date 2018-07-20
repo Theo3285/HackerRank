@@ -16,5 +16,4 @@ public class ShortRule extends TypesRule {
     private boolean fitsInShort(String value) {
         return valueOf(value) >= Short.MIN_VALUE && valueOf(value) <= Short.MAX_VALUE;
     }
-
 }

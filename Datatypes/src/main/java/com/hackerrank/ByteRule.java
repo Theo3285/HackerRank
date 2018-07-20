@@ -16,5 +16,4 @@ public class ByteRule extends TypesRule {
     private boolean fitsInByte(String value) {
         return valueOf(value) >= Byte.MIN_VALUE && valueOf(value) <= Byte.MAX_VALUE;
     }
-
 }

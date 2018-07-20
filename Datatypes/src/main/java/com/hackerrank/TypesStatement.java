@@ -8,7 +8,7 @@ public class TypesStatement {
         StringBuilder result = new StringBuilder();
 
         result.append(value);
-        result.append(" can be fitted in:\\n");
+        result.append(" can be fitted in:\n");
 
         Iterator<String> iter = types.iterator();
         while (iter.hasNext()) {
@@ -20,7 +20,7 @@ public class TypesStatement {
     }
 
     private String newLine(Iterator<String> iter) {
-        return iter.hasNext() ? "\\n" : "";
+        return iter.hasNext() ? "\n" : "";
     }
 
 }

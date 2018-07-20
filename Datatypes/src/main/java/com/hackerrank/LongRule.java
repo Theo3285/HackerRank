@@ -16,5 +16,4 @@ public class LongRule extends TypesRule {
     private boolean fitsInLong(String value) {
         return valueOf(value) >= Long.MIN_VALUE && valueOf(value) <= Long.MAX_VALUE;
     }
-
 }
