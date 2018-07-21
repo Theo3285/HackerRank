@@ -6,7 +6,7 @@ public abstract class TypesRule {
 
     private TypesRule nextRule;
 
-    public void setSuccesor(TypesRule nextRule) {
+    public void setSuccessor(TypesRule nextRule) {
         this.nextRule = nextRule;
     }
 

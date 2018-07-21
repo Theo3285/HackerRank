@@ -15,9 +15,9 @@ public class Variable {
     public Variable(TypesStatement statement, String value) {
         this.statement = statement;
         this.value = value;
-        byteRule.setSuccesor(shortRule);
-        shortRule.setSuccesor(intRule);
-        intRule.setSuccesor(longRule);
+        byteRule.setSuccessor(shortRule);
+        shortRule.setSuccessor(intRule);
+        intRule.setSuccessor(longRule);
     }
 
     public String determine() {

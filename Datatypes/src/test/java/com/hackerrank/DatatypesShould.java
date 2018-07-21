@@ -24,7 +24,9 @@ public class DatatypesShould {
 
     @Mock
     private Variable variable;
+
     private List<Variable> variables;
+
     private Datatypes datatypes;
 
     @Before
@@ -38,22 +40,21 @@ public class DatatypesShould {
 
     @Test
     public void determine_and_store_datatypes_from_variables() {
-        given(variable.determine()).willReturn("-150 can be fitted in:\n* short\n int* long");
+        given(variable.determine()).willReturn("-150 can be fitted in:\n* short\n* int\n* long");
 
         datatypes.determine();
 
-        verify(datatypeOutputRepository).add("-150 can be fitted in:\n* short\n int* long");
+        verify(datatypeOutputRepository).add("-150 can be fitted in:\n* short\n* int\n* long");
     }
 
     @Test
     public void print_type_statment_outputs() {
-        List<String> typeStatementOutputs = asList("-150 can be fitted in:\n* short\n int* long");
+        List<String> typeStatementOutputs = asList("-150 can be fitted in:\n* short\n* int\n* long");
 
         given(datatypeOutputRepository.all()).willReturn(typeStatementOutputs);
 
         datatypes.print();
 
         verify(typeStatementOutputsPrinter).print(typeStatementOutputs);
-
     }
 }
